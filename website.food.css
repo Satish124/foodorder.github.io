@@ -1,0 +1,275 @@
+*{
+    margin:0;
+    padding: 0;
+ position: relative;
+}
+/* CSS variable */
+:root{
+    --navbar-height:80px;
+}
+/* navigation bar*/
+.navbar{
+    display: flex;
+    align-items: center;
+    /* position: relative; aisa krne s peche ki strip ptli ho gyi imp. */
+    position: sticky;
+    top: 0px;
+    opacity: 1;
+}
+.navbar ul{
+    display: flex;     /* horizontal line m a gya*/
+    font-family: 'Lemonada', cursive;
+}                     
+.navbar::before{             /* navbar k piche effect*/
+  content:"";   
+  background-color: black;                          
+  position: absolute;
+  height: 70%;
+  width: 100%;
+  z-index: -1; /*  before m content"" backgound color dene k bad z index-1 krne s wo peche backgroun  a jayega imp.step*/
+  opacity: .8;  /* darkness*/
+
+      
+} /*list styling*/
+.navbar ul li{
+    color: white;
+    list-style: none;                             /* dot ni ayege list wale*/
+    font-size: 1.3rem;
+}
+.navbar ul li a{                                /* a ko liya kyuki indiviadua home etc p effect krna h*/
+    color: white;
+display: block;                              /* block isliye kyuki padoing deni h**/
+padding: 3px 25px;  
+/* border-radius: 20px; */
+text-decoration: none;
+
+
+}
+.navbar ul li a:hover{
+    color: white;
+    background-color: rgb(83, 195, 240);
+    border-radius: 15px;
+}
+  
+     
+                           
+/* logo and image*/
+
+.logo img{
+    height:40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 17px;
+    /* transition: all 1sec; */
+} 
+.navbar img:hover{
+    transform:scale(1.9);
+   
+}
+
+
+  /*home section*/
+  .home{           /* backgroud portion*/
+      display: flex;
+      flex-direction: column;
+      padding: 3px 220px;
+      justify-content: center;
+      align-items: center;
+      height: 250px;
+      color:black;
+       font-family: 'Bree Serif', serif;;
+      
+  }
+  /* backgroung img k liye whi step copy kro navbar k pseudo before*/
+ section.home{
+     height: 132px;
+ }
+  .home::before{
+    content:"";   
+    background:url('restaurant\ bck\ img.jpg');     
+                         
+    position: absolute;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    z-index: -1; /*  before m content"" backgound color dene k bad z index-1 krne s wo peche backgroun  a jayega imp.step*/
+    opacity: 1;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}  /* darkness*/
+
+    /*utility classes*/
+    .primary {
+        display: flex;
+        justify-content: center;
+        font-size: 2.8rem;
+        padding: 15px;
+        color:skyblue;
+        margin: 100px 25px;/* nich lane k liye*/
+        
+    }
+    .primary center{
+        margin-top: 200px;
+    font-size: 2.8rem;
+    }
+    .home p{
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+  .home button{
+      padding: 7px 12px;
+      margin: 8px ;
+     /* background-color: transparent; */
+      border-radius: 4px;
+      cursor: pointer;
+      /* color: white; */
+  }
+  .home button:hover{
+      transform: scale(1.1);}
+
+      
+  
+  /*service section*/
+
+
+
+  /*utilityclasses*/   /* first box*/
+  .services h2{
+      display: flex;
+      margin: 11px;
+
+  }
+  .box{
+      border: 2px solid red;
+      margin: 57px;
+     
+      
+  }
+  .box img{
+      height: 236px;
+      width: 330px;
+      
+  }
+    
+  .services{    /* box p wok kr rha h*/
+    display: flex;
+    border-radius: 28px;
+    
+
+  }
+    
+  .services li{
+height: 200px; 
+  }
+  .box p{
+      text-align: center;
+      background-color:rgb(239, 245, 248);
+    
+      
+  }
+ .center {
+     padding: 3px 5px;
+     text-align: center;
+     justify-content: center;
+ }
+  .box h2{
+    font-family: 'Lemonada', cursive;
+      color: red;
+      margin: 0px;/*space ht jayega*/
+      background-color:white;
+  }
+    /* client section*/
+    #client-section h1{  /* center m our cliet ko lane k liye*/
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    #client-section::before{   /* pseudo selector background transparent bnanae k liye*/
+        content: "";
+        position: absolute;
+        background:url('client\ bck\ img.png');
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: .5;
+
+    }
+    #clients {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+#clients img{
+    height: 120px;
+    
+}
+.client-item{
+    padding: 80px 60px;
+}
+#client-section{
+    position: relative;
+}
+/* contact section*/
+#contact{
+    position: relative;
+
+}
+#contact::before{
+
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+background: url('contact\ img.jpg');
+z-index: -1;
+opacity: .7;
+}
+footer{
+    background:white;
+    padding: 9px 20px;
+    ;
+
+}
+#contactbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+#contact h1{
+    display: flex;
+    justify-content: center;
+    font-size: 2.8rem;
+}
+#contactbox input,
+#contactbox textarea{
+ width: 100%;
+ padding: .5rem;
+ font-size: 1.1rem;
+ border-radius: 12px;
+ font-family: 'Lemonada', cursive; ;
+}
+#contactbox form{
+    width: 40%;
+   
+}
+#contactbox label{
+   font-size:  1.4rem;
+font-family:  'Lemonada', cursive;;}
+
+    
+#btn{    /* submit button h*/
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* responsibe part*/
+html{
+    scroll-behavior: smooth;
+}
+/* .primary skrollable skrollable-between{
+    left: 1px;
+} */
